@@ -1,0 +1,38 @@
+:root{
+  --bg: #0f1724;
+  --panel: #0b1220;
+  --accent: #4ade80;
+  --muted: #94a3b8;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter,Segoe UI,Roboto,Arial,sans-serif;
+  background:linear-gradient(180deg,#071127 0%, #071827 100%);
+  color:#e6eef8;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.container{
+  width:min(920px,94vw);
+  max-width:920px;
+  padding:20px;
+  background:rgba(8,12,20,0.45);
+  border-radius:12px;
+  box-shadow:0 8px 30px rgba(2,6,23,0.6);
+  text-align:center;
+}
+h1{margin:0 0 12px;font-size:28px}
+.hud{display:flex;gap:12px;justify-content:center;align-items:center;margin-bottom:12px}
+.score{font-weight:600;color:var(--accent)}
+button#restart{background:transparent;border:1px solid rgba(255,255,255,0.08);color:inherit;padding:8px 12px;border-radius:8px;cursor:pointer}
+button#enable-sound{background:var(--accent);border:none;color:#05202f;padding:8px 10px;border-radius:8px;cursor:pointer;font-weight:600}
+canvas{display:block;margin:0 auto;border:6px solid rgba(255,255,255,0.04);background:linear-gradient(180deg,#071427,#05202f);border-radius:8px}
+.controls{color:var(--muted);font-size:13px;margin-top:10px}
+.credits{color:var(--muted);font-size:12px;margin-top:6px}
+
+@media (max-width:600px){
+  canvas{width:92vw;height:92vw}
+}

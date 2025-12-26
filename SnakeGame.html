@@ -1,14 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    Snake Game
-    version 1.0
-    Changing GitHub Accouns
-    
+    <main class="container">
+        <h1>Snake</h1>
+
+        <div class="hud">
+            <div class="score">Резултат: <span id="score">0</span></div>
+            <button id="restart">Рестарт</button>
+            <button id="enable-sound">Включи звук</button>
+        </div>
+
+        <canvas id="game" aria-label="Snake game" width="600" height="600"></canvas>
+
+        <p class="controls">Управление: стрелки ← ↑ → ↓ или WASD. Яжте мишки, увеличавайте дължината и избягвайте стените и оплитанията.</p>
+        <p class="credits">Файлове: <code>SnakeGame.html</code>, <code>styles.css</code>, <code>game.js</code></p>
+    </main>
+
+    <div id="yt-player" style="width:0;height:0;overflow:hidden;position:absolute;left:-9999px;top:-9999px"></div>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="game.js" defer></script>
 </body>
 </html>
